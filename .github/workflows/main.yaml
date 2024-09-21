@@ -32,6 +32,3 @@ jobs:
 
       - name: Run tests
         run: make test_file
-
-      - name: Generate summary
-        run: make generate_and_push
