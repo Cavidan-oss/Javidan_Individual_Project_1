@@ -1,10 +1,32 @@
 import pandas as pd
-from lib import get_data, get_max_val, get_min_val, get_std, get_summary, create_histogram, create_scatter_plot, correlation_matrix
+from src.lib import get_data, get_max_val, get_min_val, get_std, get_summary, create_histogram, create_scatter_plot, correlation_matrix
 
 
 remote_path = 'https://raw.githubusercontent.com/Cavidan-oss/Javidan_Individual_Project_1/refs/heads/main/data/shanghai_ranking_2024.csv'
 
 
+
+def calculate_iqr(df, column):
+    """
+    Calculate the Interquartile Range (IQR) of a given column in the DataFrame.
+
+    Parameters:
+    df (pandas.DataFrame): The input DataFrame.
+    column (str): The name of the column for which to calculate the IQR.
+
+    Returns:
+    float: The calculated IQR of the column.
+    """
+    # Get the first quartile (25th percentile)
+    Q1 = df[column].quantile(0.25)
+    
+    # Get the third quartile (75th percentile)
+    Q3 = df[column].quantile(0.75)
+    
+    # Calculate the IQR
+    IQR = Q3 - Q1
+    
+    return IQR
 
 
 
@@ -18,11 +40,11 @@ def save_to_md(data):
         file.write("Describe:\n")
         file.write(markdown_table1)
         file.write("\n\n")  # Add a new line
-        file.write("![congress_viz](data/histogram.png)\n")
+        file.write("![alt_text_hist](data/histogram.png)\n")
         file.write("\n\n")  # Add a new line
-        file.write("![congress_viz2](data/scatter_plot.png)\n")
+        file.write("![alt_text_scatter_plot](data/scatter_plot.png)\n")
         file.write("\n\n")  # Add a new line
-        file.write("![congress_viz3](data/correlation_matrix.png)\n")
+        file.write("![alt_text_correlation_matrix](data/correlation_matrix.png)\n")
 
 
 
@@ -37,3 +59,5 @@ if __name__ == '__main__':
     correlation_matrix(top_50_df, img_save_path='data/correlation_matrix.png')
 
     save_to_md(df)
+
+    print(calculate_iqr(top_50_df, column='Alumni')) #24.500000000000007ßß

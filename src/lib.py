@@ -33,7 +33,7 @@ def get_summary(df):
     return df.describe()
 
 
-def create_histogram( dataframe, column, img_save_path = None ):
+def create_histogram( dataframe, column, img_save_path = None , show_image = False):
     values = dataframe[column].to_numpy()
     # Plotting the histogram using Matplotlib
     plt.hist(values, bins=10, edgecolor='black')
@@ -42,12 +42,13 @@ def create_histogram( dataframe, column, img_save_path = None ):
     plt.ylabel('Frequency')
     plt.grid(True)
     plt.savefig(img_save_path, dpi=300, bbox_inches='tight')
-    plt.show()
+    if show_image:
+        plt.show()
     plt.close()
 
     return plt
 
-def create_scatter_plot(dataframe, x_col, y_col, img_save_path = None ):
+def create_scatter_plot(dataframe, x_col, y_col, img_save_path = None, show_image = False ):
     
     x_val = dataframe[x_col].to_numpy()
     y_val = dataframe[y_col].to_numpy()
@@ -60,7 +61,9 @@ def create_scatter_plot(dataframe, x_col, y_col, img_save_path = None ):
     plt.grid(True)
     # Save the scatter plot to a file
     plt.savefig(img_save_path, dpi=300, bbox_inches='tight')  # Save as a PNG file
-    plt.show()
+
+    if show_image:
+        plt.show()
     # Optional: Clear the figure after saving
     plt.close()
 
@@ -69,12 +72,13 @@ def create_scatter_plot(dataframe, x_col, y_col, img_save_path = None ):
 
 
 
-def correlation_matrix(df, img_save_path):
+def correlation_matrix(df, img_save_path, show_image= False):
     df = df.select_dtypes(float)
     plt.figure(figsize=(14,10))
     plt.matshow(df.corr(), cmap='coolwarm',)
     plt.title('Correlation Matrix', pad=20)
     plt.colorbar()
     plt.savefig(img_save_path)
-    plt.show()
+    if show_image:
+        plt.show()
 

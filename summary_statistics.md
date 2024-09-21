@@ -10,10 +10,10 @@ Describe:
 | 75%   |    0      |    0      |   14.6    |  13.3    |   41.425  |   23       |
 | max   |  100      |  100      |  100      | 100      |  100      |  100       |
 
-![congress_viz](data/histogram.png)
+![alt_text_hist](data/histogram.png)
 
 
-![congress_viz2](data/scatter_plot.png)
+![alt_text_scatter_plot](data/scatter_plot.png)
 
 
-![congress_viz3](data/correlation_matrix.png)
+![alt_text_correlation_matrix](data/correlation_matrix.png)
