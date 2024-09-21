@@ -1,11 +1,19 @@
 import pandas as pd
-from src.lib import (
-    get_summary,
-    create_histogram,
-    create_scatter_plot,
-    correlation_matrix,
-)
 
+try:
+    from src.lib import (
+        get_summary,
+        create_histogram,
+        create_scatter_plot,
+        correlation_matrix,
+    )
+except Exception:
+    from lib import (
+        get_summary,
+        create_histogram,
+        create_scatter_plot,
+        correlation_matrix,
+    )
 
 remote_path = "https://raw.githubusercontent.com/Cavidan-oss/Javidan_Individual_Project_1/refs/heads/main/data/shanghai_ranking_2024.csv"
 
