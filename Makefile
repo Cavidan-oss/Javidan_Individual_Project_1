@@ -18,7 +18,7 @@ container-lint:
 all: install format lint container-lint test 
 
 generate_and_push: 
-	python main.py
+	python src/main.py
 	@if [ -n "$$(git status --porcelain)" ]; then \
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
