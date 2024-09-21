@@ -70,4 +70,4 @@ if __name__ == "__main__":
 
     save_to_md(df)
 
-    print(calculate_iqr(top_50_df, column="Alumni"))  # 24.500000000000007ßß
+    # print(calculate_iqr(top_50_df, column="Alumni"))  # 24.500000000000007ßß
