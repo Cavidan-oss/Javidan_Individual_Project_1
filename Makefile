@@ -2,13 +2,15 @@ install:
 	pip3 install -r requirements.txt
 
 format:
-	black *.py
+	black src/*.py
+	black test/*.py
 
 test_file:
 	pytest -vv --nbval -cov=my_lib -cov=main test/test_*.py *.ipynb
 
 lint:
-	ruff check *.py
+	ruff check src/*.py
+	ruff check test/*.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < .devcontainer/Dockerfile
