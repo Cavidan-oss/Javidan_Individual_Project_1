@@ -8,7 +8,7 @@
 
 
 ## Project Overview
-This project demonstrates the setup of continuous integration for a Python data science project using Gitlab CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, and testing. Gitlab Actions run these tasks, with badges reflecting their status.
+This project demonstrates the setup of continuous integration for a Python data science project using Gitlab CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, an  d testing. Gitlab Actions run these tasks, with badges reflecting their status.
 
 ---
 
@@ -60,7 +60,7 @@ make install
 ### 3. Run the Makefile commands:
 - **Run all tests**:
   ```bash
-  make test
+  make test_file
   ```
 - **Format code with black**:
   ```bash
