@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  create-environment:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,11 +24,56 @@ jobs:
       - name: Create environment 
         run: make install
 
+  format-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.5'
+
+      - name: Create environment 
+        run: make install
+
       - name: Format the code
         run: make format
+    
+  run-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.5'
+
+      - name: Create environment 
+        run: make install
 
       - name: Run Lint
         run: make lint
+        
+    run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.5'
+
+      - name: Create environment 
+        run: make install
 
       - name: Run tests
         run: make test_file
