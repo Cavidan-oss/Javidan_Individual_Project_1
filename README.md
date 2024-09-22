@@ -1,6 +1,12 @@
 
 # Javidan Individual Project 1
 
+### CI/CD Badges:
+- **Test Status**: [![Run Tests](https://github.com/nogibjj/Javidan_Individual_Project_1/actions/workflows/run-tests.yml/badge.svg)](https://github.com/nogibjj/Javidan_Individual_Project_1/actions/workflows/run-tests.yml)
+- **Code Formatting**: [![Format Code](https://github.com/nogibjj/Javidan_Individual_Project_1/actions/workflows/format-code.yml/badge.svg)](https://github.com/nogibjj/Javidan_Individual_Project_1/actions/workflows/format-code.yml)
+- **Linting**: [![Run Lint](https://github.com/nogibjj/Javidan_Individual_Project_1/actions/workflows/run-lint.yml/badge.svg)](https://github.com/nogibjj/Javidan_Individual_Project_1/actions/workflows/run-lint.yml)
+
+
 ## Project Overview
 This project demonstrates the setup of continuous integration for a Python data science project using Gitlab CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, and testing. Gitlab Actions run these tasks, with badges reflecting their status.
 
@@ -8,7 +14,7 @@ This project demonstrates the setup of continuous integration for a Python data 
 
 
 ### 1. **Jupyter Notebook**
-- The notebook performs **descriptive statistics** using **Polars** or **Pandas**.
+- The notebook performs **descriptive statistics** using **Pandas**.
 - It is tested using the `nbval` plugin for `pytest` to validate the correctness of the results.
 
 ### 2. **Python Scripts**
@@ -35,11 +41,6 @@ Tasks from the Makefile are automated using Gitlab CI/CD pipelines. The `.gitlab
 - Format the code using **black**.
 - Lint the code using **Ruff**.
 - Install the dependencies via `pip`.
-
-### CI/CD Badges:
-- **Test Status**: [![Test Badge](link_to_test_badge)]
-- **Code Formatting**: [![Black Badge](link_to_black_badge)]
-- **Linting**: [![Ruff Badge](link_to_ruff_badge)]
 
 ---
 
