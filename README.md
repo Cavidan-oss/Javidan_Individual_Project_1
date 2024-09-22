@@ -8,7 +8,7 @@
 
 
 ## Project Overview
-This project demonstrates the setup of continuous integration for a Python data science project using Gitlab CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, an  d testing. Gitlab Actions run these tasks, with badges reflecting their status.
+This project demonstrates the setup of continuous integration for a Python data science project using Github CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, an  d testing. Github Actions run these tasks, with badges reflecting their status.
 
 ---
 
@@ -18,9 +18,11 @@ This project demonstrates the setup of continuous integration for a Python data 
 - It is tested using the `nbval` plugin for `pytest` to validate the correctness of the results.
 
 ### 2. **Python Scripts**
-- `test_script.py`: Contains tests for a standalone script.
+- `test_script.py`: Contains tests for a `main.py` script.
 - `test_lib.py`: Tests the shared code in `lib.py`.
 - `lib.py`: Shared utility code used in both the notebook and scripts.
+- `main.py`: Code that utilize the scripts inside `lib.py`.
+
 
 ### 3. **Makefile**
 The `Makefile` includes the following commands:
@@ -35,8 +37,8 @@ A pinned list of dependencies for the project to ensure consistent environments 
 
 ---
 
-## Gitlab Actions
-Tasks from the Makefile are automated using Gitlab CI/CD pipelines. The `.gitlab-ci.yml` file contains jobs that:
+## Github Actions 
+Tasks from the Makefile are automated using Github CI/CD pipelines. The github worflows file contains jobs that:
 - Run tests on the Jupyter Notebook, scripts, and library.
 - Format the code using **black**.
 - Lint the code using **Ruff**.
@@ -70,8 +72,4 @@ make install
   ```bash
   make lint
   ```
-
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
