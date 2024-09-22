@@ -10,6 +10,10 @@
 ## Project Overview
 This project demonstrates the setup of continuous integration for a Python data science project using Github CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, an  d testing. Github Actions run these tasks, with badges reflecting their status.
 
+
+## Youtube Video
+[link for the Youtube video ](https://youtu.be/YWgUDeC2oCw)
+
 ---
 
 
