@@ -1,23 +1,11 @@
 
-# Continuous Integration using Gitlab Actions of Python Data Science Project
+# Javidan Individual Project 1
 
 ## Project Overview
-This project demonstrates the setup of continuous integration for a Python data science project using Gitlab CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Polars or Pandas, test scripts, a shared library, and a Makefile to automate tasks such as formatting, linting, and testing. Gitlab Actions run these tasks, with badges reflecting their status.
+This project demonstrates the setup of continuous integration for a Python data science project using Gitlab CI/CD pipelines. It includes a Jupyter Notebook performing descriptive statistics with Pandas, test scripts and jupyter notebook, a shared library, and a Makefile to automate tasks such as formatting, linting, and testing. Gitlab Actions run these tasks, with badges reflecting their status.
 
 ---
 
-## Project Structure
-The project is structured as follows:
-
-```
-├── Jupyter Notebook (.ipynb)
-├── test_script.py
-├── test_lib.py
-├── lib.py
-├── Makefile
-├── requirements.txt
-└── .gitlab-ci.yml
-```
 
 ### 1. **Jupyter Notebook**
 - The notebook performs **descriptive statistics** using **Polars** or **Pandas**.
